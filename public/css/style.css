@@ -144,6 +144,11 @@ a:focus {
     text-transform: uppercase;
     transition: all 0.5s;
     color: #fff !important;
+    border-radius: 5%;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
 }
 
 /* 
@@ -341,8 +346,18 @@ a.goto-btn:hover {
 #home.app .overlay { padding: 10% 0 5% 0 }
 #home.app {background: url(../img/bg/02.jpg);}
 
-/*Download Button*/
-a.goto-btn { margin-right: 30px ; border: #fff 1px solid; padding: 12px 18px; color: #fff;}
+/*Resume Button*/
+a.goto-btn {
+     margin-right: 30px ;
+     border: #fff 1px solid;
+     padding: 12px 18px;
+     color: #fff;
+     border-radius: 5%;
+     -webkit-border-radius: 5%;
+     -moz-border-radius: 5%;
+     -ms-border-radius: 5%;
+     -o-border-radius: 5%;
+}
 /* ---- */
 
 .ipad-wrapper .app-wrap {
@@ -1049,7 +1064,8 @@ ul.cat li a.active {
     text-transform: uppercase;
     border-color: #333333;
     transition: all 0.5s;
-    border-radius: 0;
+    border-top-right-radius: 4%;
+    border-bottom-left-radius: 4%;
     border: 0;
     color: #FFF;
 }
@@ -1122,7 +1138,8 @@ ul.metas li a { color: #38A5DB }
     color: #FFFFFF;
     padding: 25px 0;
     border-radius: 0;
-    border-top-left-radius: 0;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
     margin: 0 10px;
     margin-right: 20px;
     width: 82px;
@@ -1328,23 +1345,30 @@ ul.meta-tags li:last-child:after { content: ' ' }
     width: 50px;
     height: 50px;
     text-align: center;
-    border-radius: 4px;
+    border-radius: 50%;
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    transition: background-color .3s, 
-      opacity .5s, visibility .5s;
+    bottom: 20px;
+    right: 50px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
-  }
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transition: background-color .3s, opacity .5s, visibility .5s;
+    -moz-transition: background-color .3s, opacity .5s, visibility .5s;
+    -ms-transition: background-color .3s, opacity .5s, visibility .5s;
+    -o-transition: background-color .3s, opacity .5s, visibility .5s;
+}
   #button::after {
     content: "\f077";
     font-family: FontAwesome;
     font-weight: normal;
     font-style: normal;
     font-size: 2em;
-    line-height: 50px;
+    line-height: 45px;
     color: #fff;
   }
   #button:hover {

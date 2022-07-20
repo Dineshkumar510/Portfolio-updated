@@ -94,7 +94,7 @@ ContactForm.addEventListener('submit', (e) =>{
           backgroundColor: '#de0b0b',
           }).showToast();
       }
-  };
+  }
 
   xhr.send(JSON.stringify(FormData));
 

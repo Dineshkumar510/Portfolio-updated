@@ -414,7 +414,7 @@
                             <div class="contact-detail">
                             <a href="https://www.google.co.in/maps/place/New+Colony+Rd,+New+Colony,+Srikakulam,+Andhra+Pradesh+532001/@18.2969317,83.9000616,211m/data=!3m1!1e3!4m5!3m4!1s0x3a3c15103fc7afb5:0x4a9d8cbeeff8d725!8m2!3d18.2962315!4d83.9016821" 
                            title="location" target="_blank"><i class="fa fa-map-marker"></i></a>
-                                <h4>#7-6-78/2, Srikakulam, AP</h4> <!-- address -->
+                                <h4>Srikakulam, India</h4> <!-- address -->
                             </div>
                         </div>
                         <!-- contact detail using col 4 -->
@@ -446,7 +446,8 @@
                             <!-- Input your name -->
                             <div class="col-md-4">
                                 <div class="form-group"> <!-- Your name input -->
-                                    <input type="text" pattern="[a-zA-Z'-'\s]*" maxlength="25" name="name" autocomplete="on" class="form-control" placeholder="Your Name *" id="name" data-validation-required-message="Please enter your name." required>
+                                    <input type="text" pattern="[a-zA-Z'-'\s]*" maxlength="25" minlength="4" name="name" autocomplete="off" 
+                                    class="form-control" id="name" placeholder="Your Name *" data-validation-required-message="Please enter your name." required>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -454,7 +455,7 @@
                             <!-- Input your email -->
                             <div class="col-md-4">
                                 <div class="form-group"> <!-- Your email input -->
-                                    <input type="email" name="email" autocomplete="on" class="form-control" placeholder="Your Email *" id="email" 
+                                    <input type="email" name="email" autocomplete="off" class="form-control" placeholder="Your Email *" id="email" 
                                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" data-validation-required-message="Please enter your email address." required>
                                     <p class="help-block text-danger"></p>
                                 </div>
@@ -463,7 +464,7 @@
                             <!-- Input your Phone no. -->
                             <div class="col-md-4">
                                 <div class="form-group"> <!-- Your email input -->
-                                    <input type="tel" name="phone" autocomplete="on" class="form-control" placeholder="Your Phone No. *" id="phone"
+                                    <input type="tel" name="phone" autocomplete="off" class="form-control" placeholder="Your Phone No. *" id="phone"
                                    maxlength="10" pattern="[7-9]{1}[0-9]{9}" data-validation-required-message="Please enter your phone no." required>
                                     <p class="help-block text-danger"></p>
                                 </div>
@@ -473,7 +474,7 @@
 
                         <!-- Message Text area -->
                         <div class="form-group"> <!-- Your email input -->
-                            <textarea class="form-control" name="message" rows="7" maxlength="300" placeholder="Tell Us Something..." id="message" data-validation-required-message="Please enter a message." required></textarea>
+                            <textarea class="form-control" name="message" rows="5" maxlength="300" placeholder="Tell Us Something..." id="message" data-validation-required-message="Please enter a message." required></textarea>
                             <p class="help-block text-danger"></p>
                             <!--<div id="success"></div>-->
                         </div>
@@ -485,6 +486,7 @@
                 </div><!-- end col 10 with offset 1 to centered -->
             </div> <!-- end contact form outer row with centered text-->
 
+            
         </div><!-- end container -->
 
     </section>

@@ -21,6 +21,7 @@ app.post('/',(req, res)=> {
         secure: true,
         service: 'gmail',
         auth: {
+            type: "OAuth2",
             user: process.env.USERNAME || "DineshMails510@gmail.com",
             pass: process.env.PASSWORD || "gdygrgladmmrnmgy"
         }
@@ -36,11 +37,11 @@ app.post('/',(req, res)=> {
     transporter.sendMail(mailOptions, (error, info)=> {
         if(error){
             console.log(error);
-            res.send("Something went Wrong, Check in Backend").status(404);
+            res.send("Something went Wrong, Check in Backend");
         }
         else{
             console.log('Email sent' + info); 
-            res.send("success").status(200);
+            res.send("success");
         }
     });
 });
