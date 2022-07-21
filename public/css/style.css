@@ -230,6 +230,9 @@ a:focus {
 #header .breadcrumb > li a { color: #ffffff }
 
 /* Home Style */
+
+
+/* updated with video background
 #home {
     background: url(../img/bg/02.jpg);
     background-size: cover;
@@ -237,6 +240,24 @@ a:focus {
     background-attachment: fixed;
     background-repeat: no-repeat;
     color: #828282;
+}
+*/
+
+video#background-video{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #828282;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 #home .overlay {

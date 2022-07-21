@@ -7,29 +7,42 @@ const port = process.env.PORT || 8080;
 const router = require('./Router');
 
 app.use(express.json());
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({
+    extended: false
+}));
 app.use(express.static(__dirname + '/public'));
 app.use(router);
 
 
-app.post('/',(req, res)=> {
+app.post('/', (req, res) => {
     console.log(req.body);
 
     const transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: true,
-        service: 'gmail',
+        host: "smtp.mailtrap.io",
+        port: 2525,
+        secureConnection: false,
         auth: {
-            type: "OAuth2",
-            user: process.env.USERNAME || "DineshMails510@gmail.com",
-            pass: process.env.PASSWORD || "gdygrgladmmrnmgy"
+            user: process.env.EMAIL_USERNAME,
+            pass: process.env.EMAIL_PASSWORD
+        },
+        tls: {
+            ciphers:'SSLv3',
         }
     });
 
+
+    // Testing nodemailer using with mailtrap on dkk6089456@gmail.com
+    // transporter.verify(function(error, success) {
+    //     if (error) {
+    //          console.log(error);
+    //     } else {
+    //          console.log('Server is ready to take our messages');
+    //     }
+    //  });
+
     const mailOptions = {
         from: req.body.email,
-        to: process.env.USERNAME || "DineshMails510@gmail.com",
+        to:   process.env.EMAIL_USERNAME+"+1@inbox.mailtrap.io",
         subject: `Message from ${req.body.email}: from phone:"${req.body.phone}"`,
         text: req.body.message,
     }
@@ -37,7 +50,8 @@ app.post('/',(req, res)=> {
     transporter.sendMail(mailOptions, (error, info)=> {
         if(error){
             console.log(error);
-            res.send("Something went Wrong, Check in Backend");
+            res.send("Something error check Backend;" + " " + error);
+
         }
         else{
             console.log('Email sent' + info); 
@@ -47,6 +61,6 @@ app.post('/',(req, res)=> {
 });
 
 
-app.listen(port, ()=> {
+app.listen(port, () => {
     console.log(`App is running on port: ${port}`);
 });
